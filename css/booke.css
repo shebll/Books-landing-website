@@ -233,10 +233,14 @@ a{
 }
 }
 @media (max-width:767px) {
+    .landing{
+        height: 100vh;
+    }
     .landing img {
-        width: 600px;
+        width: 400px;
     }
 }    
+
 /* @@@@@@@@@@@@@@@@@@@@@@@@@ end landing @@@@@@@@@@@@@@@@@@@@@@@@@  */
 /* @@@@@@@@@@@@@@@@@@@@@@@@@ start features @@@@@@@@@@@@@@@@@@@@@@@@@  */
 .features{
@@ -286,8 +290,13 @@ a{
 /* @@@@@@@@@@@@@@@@@@@@@@@@@ start about @@@@@@@@@@@@@@@@@@@@@@@@@  */
 .about{
     padding: 100px 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(700px,1fr));
+    display: flex;
+    background-color: rgba(250, 229, 171, 0.514);
+}
+@media (max-width:1170px) {
+.about{
+    flex-direction: column;
+}
 }
 .about .image{
     position: relative;
@@ -341,6 +350,12 @@ a{
     font-weight: bold;
     font-size: 21px;
 }
+@media (max-width:1170px) {
+.about .text{
+    padding: 17px 19px 0;
+}
+}
+
 /* @@@@@@@@@@@@@@@@@@@@@@@@@ end about @@@@@@@@@@@@@@@@@@@@@@@@@  */
 /* @@@@@@@@@@@@@@@@@@@@@@@@@ start books @@@@@@@@@@@@@@@@@@@@@@@@@  */
 .books{
@@ -348,7 +363,6 @@ a{
     padding: 100px 0;
 }
 .books .image {
-    height: 750px;
     margin-top: 50px;
     filter: grayscale(5);
     -webkit-filter: grayscale(5);
@@ -393,7 +407,7 @@ a{
     margin-top: 80px;
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(auto-fill, minmax(30% ,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px ,1fr));
     position: relative;
 }
 .testimonial .holder .box{
@@ -405,6 +419,8 @@ a{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-bottom: 12px solid rgba(0, 68, 255, 0.801);
+    position: relative;
+    margin-bottom: 50px;
 }
 .testimonial .holder .box img {
     top: -50px;
